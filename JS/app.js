@@ -23,7 +23,108 @@ var Seattle = {
 }
 Seattle.diplayingObject();
 
+// ------------------------------ Tokyo shop
 
+var Tokyo = {
+    costumerMax: 24,
+    costumerMin: 3,
+    avgCostumer: 1.2,
+    numCos: 0,
+    numCookies: 0,
+    hourlyCookies: [],
+    sumCookies: 0,
+    getcostumer: function (min, max) {
+        this.numCos = generateRandomCostumerNum(min, max);
+    },
+
+    getCookies: function (numCos, AvgCookie) {
+        this.numCookies = generatCookies(numCos, AvgCookie);
+    },
+    diplayingObject: function () {
+        render(this, 'Tokyo');
+
+    },
+
+}
+Tokyo.diplayingObject();
+
+// ------------------------------ Dubai shop
+
+var Dubai = {
+    costumerMax: 38,
+    costumerMin: 11,
+    avgCostumer: 3.7,
+    numCos: 0,
+    numCookies: 0,
+    hourlyCookies: [],
+    sumCookies: 0,
+    getcostumer: function (min, max) {
+        this.numCos = generateRandomCostumerNum(min, max);
+    },
+
+    getCookies: function (numCos, AvgCookie) {
+        this.numCookies = generatCookies(numCos, AvgCookie);
+    },
+    diplayingObject: function () {
+        render(this, 'Dubai');
+
+    },
+
+}
+Dubai.diplayingObject();
+
+// ------------------------------ Paris shop
+
+var Paris = {
+    costumerMax: 38,
+    costumerMin: 20,
+    avgCostumer: 2.3,
+    numCos: 0,
+    numCookies: 0,
+    hourlyCookies: [],
+    sumCookies: 0,
+    getcostumer: function (min, max) {
+        this.numCos = generateRandomCostumerNum(min, max);
+    },
+
+    getCookies: function (numCos, AvgCookie) {
+        this.numCookies = generatCookies(numCos, AvgCookie);
+    },
+    diplayingObject: function () {
+        render(this, 'Paris');
+
+    },
+
+}
+Paris.diplayingObject();
+
+// ------------------------------ Lima shop
+
+var Lima = {
+    costumerMax: 16,
+    costumerMin: 2,
+    avgCostumer: 4.6,
+    numCos: 0,
+    numCookies: 0,
+    hourlyCookies: [],
+    sumCookies: 0,
+    getcostumer: function (min, max) {
+        this.numCos = generateRandomCostumerNum(min, max);
+    },
+
+    getCookies: function (numCos, AvgCookie) {
+        this.numCookies = generatCookies(numCos, AvgCookie);
+    },
+    diplayingObject: function () {
+        render(this, 'Lima');
+
+    },
+
+}
+
+Lima.diplayingObject();
+
+// -------------------------------- End of objects.
 
 
 // List Of functions :
