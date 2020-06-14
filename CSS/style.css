@@ -1,0 +1,45 @@
+body {
+    background-color: #ECCE8E;
+    width : 100%
+}
+
+.headerB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+header {
+    background-color: #270722;
+    color: #ECCE8E;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 30pt;
+
+}
+
+header img {
+    width: 280px;
+    height: 90px;
+
+}
+
+header nav ul{
+
+    padding: 5px;
+}
+
+header nav ul li {
+    display: inline;
+    font-size: 20pt;
+    padding: 20px;
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ECCE8E;
+}
+
