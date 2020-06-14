@@ -43,3 +43,18 @@ header nav ul li a {
     color: #ECCE8E;
 }
 
+main div h3 {
+    color:#270722 ;
+    font-size: 20pt;
+    padding: 100px;
+    text-align: center;
+
+}
+
+main div p {
+    font-size: 15pt;
+    color: #270722;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
