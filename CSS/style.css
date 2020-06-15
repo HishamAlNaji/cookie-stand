@@ -42,7 +42,9 @@ header nav ul li a {
     text-decoration: none;
     color: #ECCE8E;
 }
-
+main{
+    color: #ECCE8E;
+}
 main div h3 {
     color:#270722 ;
     font-size: 20pt;
@@ -59,16 +61,24 @@ main div p {
     margin-right: 100px;
 }
 
-td {
-    border: 1px solid black;
+main table tr td {
+    border: 5px solid #5E5D5C;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #270722;
+
+
 }
  
-th {
+main table tr th {
     border: none;
+    font-weight: bold;
+    font-size: 15pt;
+    color: #270722;
 }
 
 table {
     border-collapse: collapse;
-    margin: 30px;
-
+    margin: 50px;
 }

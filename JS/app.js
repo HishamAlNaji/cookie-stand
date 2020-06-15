@@ -40,8 +40,6 @@ var table = document.createElement('table');
 
 City.prototype.render = function (location, title) {
     var mainTag = document.getElementsByTagName('main')[0];
-    var shopLocation = document.createElement('h2');
-    mainTag.appendChild(shopLocation);
     mainTag.appendChild(table);
     var tr = document.createElement('tr')
     table.appendChild(tr)
