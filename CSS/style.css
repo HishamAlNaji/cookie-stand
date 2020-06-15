@@ -59,6 +59,15 @@ main div p {
     margin-right: 100px;
 }
 
-main table , tr , td  {
+td {
     border: 1px solid black;
+}
+ 
+th {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+
 }
