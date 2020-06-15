@@ -58,3 +58,17 @@ main div p {
     margin-left: 100px;
     margin-right: 100px;
 }
+
+td {
+    border: 1px solid black;
+}
+ 
+th {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 30px;
+
+}
