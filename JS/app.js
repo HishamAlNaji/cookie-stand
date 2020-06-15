@@ -104,20 +104,19 @@ function generatCookies(randomCust, AvgCookie) {
 // ------------------------------ header raw Function :
 
 function headerRaw() {
-    var table = document.createElement('table');
     var tr = document.createElement('tr')
     table.appendChild(tr)
     for (var i = 0; i < Time.length; i++) {
         var th = document.createElement('th');
         tr.appendChild(th);
         th.textContent = Time[i];
-
     }
 }
 
 // ------------------------------ Footer Raw Function :
 
-function footerRaw() {
+function footerRaw(){
+
     var tr = document.createElement('tr')
     table.appendChild(tr)
     var td = document.createElement('td');
@@ -138,8 +137,8 @@ function footerRaw() {
     var td = document.createElement('td');
     tr.appendChild(td);
     td.textContent = allCookies + " cookies";
-
 }
+
 
 
 
