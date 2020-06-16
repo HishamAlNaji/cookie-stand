@@ -62,7 +62,7 @@ main div p {
 }
 
 main table tr td {
-    border: 5px solid #5E5D5C;
+    border: 5px solid #ECCE8E;
     text-align: center;
     padding: 10px;
     font-weight: bold;
@@ -76,6 +76,7 @@ main table tr th {
     font-weight: bold;
     font-size: 15pt;
     color: #270722;
+    vertical-align: center;
 }
 
 table {

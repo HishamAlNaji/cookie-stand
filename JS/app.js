@@ -43,39 +43,15 @@ City.prototype.render = function (location, title) {
     mainTag.appendChild(table);
     var tr = document.createElement('tr')
     table.appendChild(tr)
-    var td = document.createElement('td');
-    tr.appendChild(td);
-    td.textContent = title;
-    var hourlyCookies;
+    var th = document.createElement('th');
+    tr.appendChild(th);
+    th.textContent = title;
     var i;
-    for (i = 6; i < 20; i++) {
-        var hour
-        if (i < 12) {
+    for (i = 0; i < Time.length-2; i++) { 
             var td = document.createElement('td');
             tr.appendChild(td);
-            location.getcostumer(location.costumerMin, location.costumerMax);
-            location.getCookies(location.numCos, location.avgCostumer);
-            location.hourlyCookies[i - 6] = location.numCookies;
-            td.textContent = location.hourlyCookies[i - 6] + " cookies"
-
-        } else if (i > 12) {
-            var td = document.createElement('td');
-            tr.appendChild(td);
-            location.getcostumer(location.costumerMin, location.costumerMax);
-            location.getCookies(location.numCos, location.avgCostumer);
-            location.hourlyCookies[i - 6] = location.numCookies;
-            td.textContent = location.hourlyCookies[i - 6] + " cookies"
-        } else if (i = 12) {
-            var td = document.createElement('td');
-            tr.appendChild(td);
-            location.getcostumer(location.costumerMin, location.costumerMax);
-            location.getCookies(location.numCos, location.avgCostumer);
-            location.hourlyCookies[i - 6] = location.numCookies;
-            td.textContent = location.hourlyCookies[i - 6] + " cookies"
-
-        }
-
-
+            location.hourlyCookies[i] = location.numCookies;
+            td.textContent = location.hourlyCookies[i] + " cookies"
     }
 
     // To generate the summation of cookies for all hours :
@@ -117,9 +93,9 @@ function footerRaw(){
 
     var tr = document.createElement('tr')
     table.appendChild(tr)
-    var td = document.createElement('td');
-    tr.appendChild(td);
-    td.textContent = "Total";
+    var th = document.createElement('th');
+    tr.appendChild(th);
+    th.textContent = "Total";
 
     var allCookies = 0;
     for (var i = 0; i < 14; i++) {
@@ -136,9 +112,6 @@ function footerRaw(){
     tr.appendChild(td);
     td.textContent = allCookies + " cookies";
 }
-
-
-
 
 
 // ------------------------------ All shops Renderings :
@@ -162,4 +135,6 @@ for (var i = 0; i < Cities.length; i++) {
 }
 
 footerRaw();
+
+console.log(Cities[0].hourlyCookies.length)
 
