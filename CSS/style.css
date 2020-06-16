@@ -13,6 +13,7 @@ header {
     background-color: #270722;
     color: #ECCE8E;
     padding: 30px;
+    text-shadow: black ;
 }
 
 header h1 {
@@ -65,9 +66,8 @@ main table tr td {
     border: 5px solid #ECCE8E;
     text-align: center;
     padding: 10px;
-    font-weight: bold;
-    background-color: #270722;
-
+    font-weight: bold ;
+    color: #270722;
 
 }
  
@@ -83,3 +83,4 @@ table {
     border-collapse: collapse;
     margin: 50px;
 }
+
