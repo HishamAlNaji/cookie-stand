@@ -50,6 +50,8 @@ City.prototype.render = function (location, title) {
     for (i = 0; i < Time.length-2; i++) { 
             var td = document.createElement('td');
             tr.appendChild(td);
+            location.getcostumer(location.costumerMin, location.costumerMax);
+            location.getCookies(location.numCos, location.avgCostumer);
             location.hourlyCookies[i] = location.numCookies;
             td.textContent = location.hourlyCookies[i] + " cookies"
     }
