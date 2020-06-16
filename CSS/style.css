@@ -165,3 +165,10 @@ main div ul {
     font-family: 'Quicksand', sans-serif;
     margin-top: 50px;
 }
+
+main div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
