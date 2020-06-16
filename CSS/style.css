@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&family=Quicksand:wght@600&display=swap');
+
 body {
     background-color: #ECCE8E;
     width : 100%
@@ -12,12 +16,18 @@ body {
 header {
     background-color: #270722;
     color: #ECCE8E;
-    padding: 30px;
-    text-shadow: black ;
+height: fit-content;  
+padding-left: 15px;  
+padding-right: 15px;  
+font-family: 'Headland One', serif;
+
+
 }
 
 header h1 {
     font-size: 30pt;
+    text-align: center;
+    width: 300px;
 
 }
 
@@ -28,8 +38,7 @@ header img {
 }
 
 header nav ul{
-
-    padding: 5px;
+    padding: 4px;
 }
 
 header nav ul li {
@@ -43,44 +52,123 @@ header nav ul li a {
     text-decoration: none;
     color: #ECCE8E;
 }
-main{
-    color: #ECCE8E;
+
+main {
+
+color:#270722 ;
 }
+
 main div h3 {
     color:#270722 ;
     font-size: 20pt;
-    padding: 100px;
     text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
 
 }
 
-main div p {
+.history {
     font-size: 15pt;
     color: #270722;
-    text-align: center;
     margin-left: 100px;
     margin-right: 100px;
-}
-
-main table tr td {
-    border: 5px solid #ECCE8E;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
-    padding: 10px;
-    font-weight: bold ;
-    color: #270722;
 
 }
- 
-main table tr th {
-    border: none;
-    font-weight: bold;
-    font-size: 15pt;
+
+main div h3 a {
+    text-decoration: none;
     color: #270722;
-    vertical-align: center;
+    
 }
 
 table {
     border-collapse: collapse;
-    margin: 50px;
+    margin: 30px;
 }
 
+
+ td {
+    border: 5px solid #ECCE8E;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold ;
+    background-color:#270722 ;
+    color:#ECCE8E;
+
+}
+
+
+tr:first-child{
+    color:#ECCE8E;
+}
+
+th{
+    border: 5px solid #ECCE8E;
+    font-weight: bold;
+    font-size: 15pt;
+    vertical-align: center;  
+    background-color: #7C6354;
+    padding: 10px;
+    text-align: center;
+
+}
+ 
+tr th:first-child {
+   
+    color:#ECCE8E
+}
+
+th:first-child(){
+    background-color: #ECCE8E;
+
+}
+
+#hours {
+    font-size: 50pt;
+    padding: 100px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+#locations {
+    background-color: #ECCE8E ;
+    color: #270722;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+#locationsh3 {
+    font-size: 30pt;
+}
+
+main div p {
+    background-color: #ECCE8E ;
+    color: #270722;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 50px;
+}
+
+main div ul {
+    background-color: #ECCE8E ;
+    color: #270722;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 50px;
+}
+
+main div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
