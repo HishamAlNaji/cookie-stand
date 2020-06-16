@@ -11,18 +11,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center ;
-}
-
-header {
+    width: 100% ;
     background-color: #270722;
     color: #ECCE8E;
-height: fit-content;  
-padding-left: 15px;  
-padding-right: 15px;  
-font-family: 'Headland One', serif;
-
-
+    height: fit-content;  
+    padding-left: 10px;  
+    padding-right: 10px;  
+    font-family: 'Headland One', serif;
+    position: fixed;
 }
+
 
 header h1 {
     font-size: 30pt;
@@ -54,11 +52,12 @@ header nav ul li a {
 }
 
 main {
-
 color:#270722 ;
+padding-top: 90px ;
 }
 
-main div h3 {
+
+.contacth3 {
     color:#270722 ;
     font-size: 20pt;
     text-align: center;
@@ -79,7 +78,7 @@ main div h3 {
 
 }
 
-main div h3 a {
+.contactlink {
     text-decoration: none;
     color: #270722;
     
@@ -127,7 +126,7 @@ th:first-child(){
 
 }
 
-#hours {
+.hours {
     font-size: 50pt;
     padding: 100px;
     text-align: center;
@@ -135,7 +134,7 @@ th:first-child(){
 
 }
 
-#locations {
+.locations {
     background-color: #ECCE8E ;
     color: #270722;
     text-align: center;
@@ -144,11 +143,11 @@ th:first-child(){
 
 }
 
-#locationsh3 {
+.locationsh3 {
     font-size: 30pt;
 }
 
-main div p {
+.imgdes , .cities {
     background-color: #ECCE8E ;
     color: #270722;
     text-align: center;
@@ -157,7 +156,7 @@ main div p {
     margin-top: 50px;
 }
 
-main div ul {
+.citieslist  {
     background-color: #ECCE8E ;
     color: #270722;
     text-align: center;
@@ -166,9 +165,32 @@ main div ul {
     margin-top: 50px;
 }
 
-main div img {
+.familyimg {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
+}
+
+.locations {
+
+    padding-top: 30px;
+}
+
+.locationsh3{
+
+    padding-top: 30px;
+
+}
+
+.opentime {
+
+    padding-top: 30px;
+
+}
+
+.prizeimg {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
 }
