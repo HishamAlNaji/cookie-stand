@@ -26,21 +26,21 @@
 
     </header>
     <main>
-     <form class="salesform">
-         <fieldset>
+     <form id="branchForm">
+         <fieldset  class="salesform">
              <label for="cityName">Add a new Branch</label>
              <input id = "cityName" type="text" placeholder="Mention a new city here">
              <br>
              <label for="maxCos">Max Number of costumers / hour</label>
-             <input id = "maxCos" type="text" placeholder="type the number here">
+             <input id = "maxCos" type="number" placeholder="type the number here">
              <br>
              <label for="minCos">Min Number of costumers / hour</label>
-             <input id = "minCos" type="text" placeholder="type the number here">
+             <input id = "minCos" type="number" placeholder="type the number here">
              <br>
              <label for="avgCookies">Avg. Cookies sold / Costumer</label>
-             <input id = "avgCookies" type="text" placeholder="type the number here">
+             <input id = "avgCookies" type="number" placeholder="type the number here">
              <br>
-             <button id="saveBtn">Save</button>
+             <button id="saveBtn" type="submit">Save</button>
          </fieldset>
      </form>
     </main>
