@@ -194,3 +194,7 @@ th:first-child(){
     justify-content: space-evenly;
     padding-top: 30px;
 }
+
+.salesform {
+    width: fit-content;
+}
