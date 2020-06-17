@@ -14,10 +14,10 @@
             <h1>Pats Salmon Cookie</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sales.html">Sales</a></li>
-                    <li><a href="Hours.html">Hours</a></li>
-                    <li><a href="contact.html">About us</a></li>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="sales.html"><li>Sales</li></a>
+                    <a href="Hours.html"><li>Hours</li></a>
+                    <a href="contact.html"><li>About us</li></a>
                 </ul>
             </nav>
 
@@ -29,16 +29,16 @@
      <form id="branchForm" class="salesform">
          <fieldset>
              <label for="cityName" class="labels">Add a new Branch</label>
-             <input id = "cityName" type="text" placeholder="Mention a new city here" class="inputs">
+             <input id = "cityName" type="text" placeholder="Mention a new city here" class="inputs" required>
              <br>
              <label for="maxCos" class="labels">Max Number of costumers</label>
-             <input id = "maxCos" type="number" placeholder="MAX" class="inputs">
+             <input id = "maxCos" type="number" placeholder="MAX" class="inputs" required>
              <br>
              <label for="minCos" class="labels">Min Number of costumers</label>
-             <input id = "minCos" type="number" placeholder="MIN" class="inputs">
+             <input id = "minCos" type="number" placeholder="MIN" class="inputs" required>
              <br>
              <label for="avgCookies" class="labels">Avg. Cookies sold / Costumer</label>
-             <input id = "avgCookies" type="number" placeholder="AVG" class="inputs">
+             <input id = "avgCookies" type="number" placeholder="AVG" class="inputs" required>
              <br>
              <button id="saveBtn" type="submit">Save</button>
          </fieldset>
