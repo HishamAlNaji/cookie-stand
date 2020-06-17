@@ -15,7 +15,11 @@ var Time = ['',
     '6pm',
     '7pm',
     'Daily Location Total'];
-function City(costumerMax, costumerMin, avgCostumer) {
+
+var Cities = [];
+
+function City(name, costumerMax, costumerMin, avgCostumer) {
+    this.name = name
     this.costumerMax = costumerMax;
     this.costumerMin = costumerMin;
     this.avgCostumer = avgCostumer;
@@ -23,6 +27,7 @@ function City(costumerMax, costumerMin, avgCostumer) {
     this.numCookies = 0;
     this.hourlyCookies = [];
     this.sumCookies = 0;
+    Cities.push(this);
 }
 
 City.prototype.getcostumer = function (min, max) {
@@ -38,32 +43,32 @@ City.prototype.getCookies = function (numCos, AvgCookie) {
 
 var table = document.createElement('table');
 
-City.prototype.render = function (location, title) {
+City.prototype.render = function () {
     var mainTag = document.getElementsByTagName('main')[0];
     mainTag.appendChild(table);
     var tr = document.createElement('tr')
     table.appendChild(tr)
     var th = document.createElement('th');
     tr.appendChild(th);
-    th.textContent = title;
+    th.textContent = this.name;
     var i;
-    for (i = 0; i < Time.length-2; i++) { 
-            var td = document.createElement('td');
-            tr.appendChild(td);
-            location.getcostumer(location.costumerMin, location.costumerMax);
-            location.getCookies(location.numCos, location.avgCostumer);
-            location.hourlyCookies[i] = location.numCookies;
-            td.textContent = location.hourlyCookies[i] + " cookies"
+    for (i = 0; i < Time.length - 2; i++) {
+        var td = document.createElement('td');
+        tr.appendChild(td);
+        this.getcostumer(this.costumerMin, this.costumerMax);
+        this.getCookies(this.numCos, this.avgCostumer);
+        this.hourlyCookies[i] = this.numCookies;
+        td.textContent = this.hourlyCookies[i] + " cookies"
     }
 
     // To generate the summation of cookies for all hours :
 
-    for (var i = 0; i < location.hourlyCookies.length; i++) {
-        location.sumCookies = location.sumCookies + location.hourlyCookies[i]
+    for (var i = 0; i < this.hourlyCookies.length; i++) {
+        this.sumCookies = this.sumCookies + this.hourlyCookies[i]
     }
     var td = document.createElement('td');
     tr.appendChild(td);
-    td.textContent = location.sumCookies + " cookies";
+    td.textContent = this.sumCookies + " cookies";
 
 }
 
@@ -91,7 +96,7 @@ function headerRaw() {
 
 // ------------------------------ Footer Raw Function :
 
-function footerRaw(){
+function footerRaw() {
 
     var tr = document.createElement('tr')
     table.appendChild(tr)
@@ -103,7 +108,7 @@ function footerRaw(){
     for (var i = 0; i < 14; i++) {
         var sumHourlyCookies = 0;
         var td = document.createElement('td');
-        for (var z = 0; z < 5; z++) {
+        for (var z = 0; z < Cities.length; z++) {
             sumHourlyCookies = sumHourlyCookies + Cities[z].hourlyCookies[i]
         }
         allCookies = allCookies + sumHourlyCookies
@@ -116,23 +121,49 @@ function footerRaw(){
 }
 
 
+// ------------------------------ Form :
+
+var newBranch = document.getElementById("branchForm");
+
+newBranch.addEventListener("submit", addBranch);
+
+function addBranch(event) {
+    event.preventDefault()
+
+    var branchName = event.target.cityName.value;
+    var max = Number(event.target.maxCos.value);
+    var min = Number(event.target.minCos.value);
+    var avg = Number(event.target.avgCookies.value);
+
+    var newBranch = new City(branchName, max, min, avg);
+
+    document.getElementById("table");
+    var tr = document.createElement('tr')
+    table.deleteRow(table.rows.length-1) 
+    
+    newBranch.getcostumer(newBranch.costumerMax, newBranch.costumerMin)
+    newBranch.getCookies(newBranch.numCos, newBranch.avgCostumer)
+    newBranch.render(newBranch);
+  
+    footerRaw();
+}
+
+
 // ------------------------------ All shops Renderings :
 
 headerRaw();
 
-var Seattle = new City(65, 23, 6.3);
-var Tikyo = new City(24, 3, 1.2);
-var Dubai = new City(38, 20, 3.7);
-var Paris = new City(38, 11, 2.3);
-var Lima = new City(16, 2, 4.6);
+var Seattle = new City('Seattle', 65, 23, 6.3);
+var Tikyo = new City('Tikyo', 24, 3, 1.2);
+var Dubai = new City('Dubai', 38, 20, 3.7);
+var Paris = new City('Paris', 38, 11, 2.3);
+var Lima = new City('Lima', 16, 2, 4.6);
 
-var Cities = [Seattle, Tikyo, Dubai, Paris, Lima];
-var strCities = ['Seattle', 'Tikyo', 'Dubai', 'Paris', 'Lima']
-
+console.log(Cities)
 for (var i = 0; i < Cities.length; i++) {
     Cities[i].getcostumer(Cities[i].costumerMax, Cities[i].costumerMin)
     Cities[i].getCookies(Cities[i].numCos, Cities[i].avgCostumer)
-    Cities[i].render(Cities[i], strCities[i])
+    Cities[i].render(Cities[i])
 
 }
 

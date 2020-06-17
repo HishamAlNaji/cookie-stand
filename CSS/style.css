@@ -52,10 +52,8 @@ header nav ul li a {
 }
 
 main {
-color:#270722 ;
-padding-top: 90px ;
+    padding-top: 90px;
 }
-
 
 .contacth3 {
     color:#270722 ;
@@ -193,4 +191,55 @@ th:first-child(){
     display: flex;
     justify-content: space-evenly;
     padding-top: 30px;
+}
+
+.salesform {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.labels {
+    color: #270722 ;
+    font-size: 25pt;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+#saveBtn {
+    background-color:#61677C;
+
+font-size: 15pt;
+margin-top: 15px;
+font-family: 'Quicksand', sans-serif;
+width: 101.5%;
+}
+
+.inputs {
+text-align: center;
+width: 100%;
+height: 20px;
+margin-top: 10px;
+background-color: #270722 ;
+
+}
+
+li:hover {
+    background-color: #ECCE8E;
+border-radius: 20px;
+color: #270722;
+transition-duration: 0.5s;
+}
+
+a:hover {
+    color: #270722;
+    
+}
+
+button:hover {
+    background-color:#270722 ;
+    color :#ECCE8E;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
