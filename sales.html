@@ -26,22 +26,23 @@
 
     </header>
     <main>
-     <form id="branchForm">
-         <fieldset  class="salesform">
-             <label for="cityName">Add a new Branch</label>
-             <input id = "cityName" type="text" placeholder="Mention a new city here">
+     <form id="branchForm" class="salesform">
+         <fieldset>
+             <label for="cityName" class="labels">Add a new Branch</label>
+             <input id = "cityName" type="text" placeholder="Mention a new city here" class="inputs">
              <br>
-             <label for="maxCos">Max Number of costumers / hour</label>
-             <input id = "maxCos" type="number" placeholder="type the number here">
+             <label for="maxCos" class="labels">Max Number of costumers</label>
+             <input id = "maxCos" type="number" placeholder="MAX" class="inputs">
              <br>
-             <label for="minCos">Min Number of costumers / hour</label>
-             <input id = "minCos" type="number" placeholder="type the number here">
+             <label for="minCos" class="labels">Min Number of costumers</label>
+             <input id = "minCos" type="number" placeholder="MIN" class="inputs">
              <br>
-             <label for="avgCookies">Avg. Cookies sold / Costumer</label>
-             <input id = "avgCookies" type="number" placeholder="type the number here">
+             <label for="avgCookies" class="labels">Avg. Cookies sold / Costumer</label>
+             <input id = "avgCookies" type="number" placeholder="AVG" class="inputs">
              <br>
              <button id="saveBtn" type="submit">Save</button>
          </fieldset>
+         
      </form>
     </main>
     <script src="JS/app.js"></script>
