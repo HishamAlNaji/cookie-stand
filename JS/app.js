@@ -14,7 +14,8 @@ var Time = ['',
     '5pm',
     '6pm',
     '7pm',
-    'Daily Location Total'];
+    'Daily Location Total'
+];
 
 var Cities = [];
 
@@ -30,11 +31,11 @@ function City(name, costumerMax, costumerMin, avgCostumer) {
     Cities.push(this);
 }
 
-City.prototype.getcostumer = function (min, max) {
+City.prototype.getcostumer = function(min, max) {
     this.numCos = generateRandomCostumerNum(min, max);
 };
 
-City.prototype.getCookies = function (numCos, AvgCookie) {
+City.prototype.getCookies = function(numCos, AvgCookie) {
     this.numCookies = generatCookies(numCos, AvgCookie);
 };
 
@@ -43,7 +44,7 @@ City.prototype.getCookies = function (numCos, AvgCookie) {
 
 var table = document.createElement('table');
 
-City.prototype.render = function () {
+City.prototype.render = function() {
     var mainTag = document.getElementsByTagName('main')[0];
     mainTag.appendChild(table);
     var tr = document.createElement('tr')
@@ -139,12 +140,12 @@ function addBranch(event) {
 
     document.getElementById("table");
     var tr = document.createElement('tr')
-    table.deleteRow(table.rows.length-1) 
-    
+    table.deleteRow(table.rows.length - 1)
+
     newBranch.getcostumer(newBranch.costumerMax, newBranch.costumerMin)
     newBranch.getCookies(newBranch.numCos, newBranch.avgCostumer)
     newBranch.render(newBranch);
-  
+
     footerRaw();
 }
 
@@ -170,4 +171,3 @@ for (var i = 0; i < Cities.length; i++) {
 footerRaw();
 
 console.log(Cities[0].hourlyCookies.length)
-

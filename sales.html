@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
     <header>
         <div class="headerB">
@@ -14,10 +16,18 @@
             <h1>Pats Salmon Cookie</h1>
             <nav>
                 <ul>
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="sales.html"><li>Sales</li></a>
-                    <a href="Hours.html"><li>Hours</li></a>
-                    <a href="contact.html"><li>About us</li></a>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="sales.html">
+                        <li>Sales</li>
+                    </a>
+                    <a href="Hours.html">
+                        <li>Hours</li>
+                    </a>
+                    <a href="contact.html">
+                        <li>About us</li>
+                    </a>
                 </ul>
             </nav>
 
@@ -26,25 +36,26 @@
 
     </header>
     <main>
-     <form id="branchForm" class="salesform">
-         <fieldset>
-             <label for="cityName" class="labels">Add a new Branch</label>
-             <input id = "cityName" type="text" placeholder="Mention a new city here" class="inputs" required>
-             <br>
-             <label for="maxCos" class="labels">Max Number of costumers</label>
-             <input id = "maxCos" type="number" placeholder="MAX" class="inputs" required>
-             <br>
-             <label for="minCos" class="labels">Min Number of costumers</label>
-             <input id = "minCos" type="number" placeholder="MIN" class="inputs" required>
-             <br>
-             <label for="avgCookies" class="labels">Avg. Cookies sold / Costumer</label>
-             <input id = "avgCookies" type="number" placeholder="AVG" class="inputs" required>
-             <br>
-             <button id="saveBtn" type="submit">Save</button>
-         </fieldset>
-         
-     </form>
+        <form action="submit" id="branchForm" class="salesform">
+            <fieldset>
+                <label for="cityName" class="labels">Add a new Branch</label>
+                <input id="cityName" type="text" placeholder="Mention a new city here" class="inputs" required>
+                <br>
+                <label for="maxCos" class="labels">Max Number of costumers</label>
+                <input id="maxCos" type="number" placeholder="MAX" class="inputs" required>
+                <br>
+                <label for="minCos" class="labels">Min Number of costumers</label>
+                <input id="minCos" type="number" placeholder="MIN" class="inputs" required>
+                <br>
+                <label for="avgCookies" class="labels">Avg. Cookies sold / Costumer</label>
+                <input id="avgCookies" type="number" placeholder="AVG" class="inputs" required>
+                <br>
+                <button id="saveBtn" type="submit">SHARE RECIPT</button>
+            </fieldset>
+
+        </form>
     </main>
     <script src="JS/app.js"></script>
 </body>
+
 </html>
